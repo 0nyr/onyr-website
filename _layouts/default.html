@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ page.title }}</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps|Quicksand:400,700&display=swap" rel="stylesheet"> 
+    <!-- style -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/inner-moon.min.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseurl }}/assets/favicons/site.webmanifest">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body id="grid-body-container">
+    <header id="general_header">
+      {% include navigation.html %}
+    </header>
+
+    <div id="navbar_spacer"></div>
+    
+    <main id="general_main">
+      {{ content }}
+    </main>
+    
+    <footer id="general_footer">
+      <div id="general_footer_container">
+        <p>© {{ site.time | date: "%Y" }} - Onyr.net</p>
+        <p>Made with <span id="heart">♥</span> in Lyon, by <a class="mono" href="https://onyr.net/">0nyr</a></p>
+        <p><i class="nf nf-cod-github"></i> <a href="https://github.com/0nyr/la-ruche-lourdes">Source code</a></p>
+      </div>
+    </footer>
+
+    <div id="footer_spacer"></div>
+    
+  </body>
+
+  <!-- Scripts -->
+  <script src="{{ site.baseurl }}/assets/js/theme-switch.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/animations.js"></script>
+</html>

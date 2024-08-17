@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div id="front_logo_header">
+  <picture id="front_logo" class="main_logo_subelement">	<!-- WARN: ./ the dot is very important ! -->
+    <source srcset="{{ site.baseurl }}/assets/images/logos/front_logo/front_logo_onyr_500x500.webp"
+        type="image/webp">
+    <source srcset="{{ site.baseurl }}//home/onyr/code/onyr-website/assets/images/logos/front_logo/front_logo_onyr_500x500.png"
+        type="image/png" >
+    <img 	class="circle_bg"
+        src="{{ site.baseurl }}/home/onyr/code/onyr-website/assets/images/logos/front_logo/front_logo_onyr_500x500.png"
+        alt="logo, symbole onyr">
+  </picture>
+  <img class="logo_shape main_logo_subelement" id="mobile_shape_1" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_1.svg" alt="rotor 1">
+  <img class="logo_shape main_logo_subelement" id="mobile_shape_2" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_2.svg" alt="stator 2">
+  <img class="logo_shape main_logo_subelement" id="mobile_shape_3" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_3.svg" alt="rotor 3">
+  <img class="logo_shape main_logo_subelement" id="mobile_shape_4" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_4.svg" alt="stator 4">
+</div>
+
+<div id="content">
+  {{ content }}
+
+  <!-- List latest 3 posts -->
+  <h2>Last posts:</h2>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li>
+        <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ site.baseurl }}/blog/">See all posts</a>
+</div>

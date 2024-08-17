@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="content">
+  <h1>{{ page.title }}</h1>
+  <p>
+      {{ page.date | date_to_string }}
+      {% assign author = site.members | where: 'short_name', page.author | first %}
+      {% if author %}
+        - <a href="{{ author.url }}">{{ author.short_name }}</a>
+      {% endif %}
+  </p>
+
+  {{ content }}
+
+  <p><a href="https://onyr.net/">Onyr</a></p>
+</div>

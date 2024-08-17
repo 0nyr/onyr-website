@@ -1,0 +1,488 @@
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
+/* Theming */
+:root {
+    /* light theme */
+    --background-color: #ebeef2;
+    --content-bg-color: #fff;
+    --special-bg-color: #f2f5fb; 
+    --text-color: #4c4c4c;
+
+    /* Special colors */
+    --orange: #da7e16;
+    --pink: #da1b60;
+    --green: #52c399;
+    --cyan: #42aada;
+    --blue: #1d64a8;
+    --yellow: #f4c50e;
+
+    --red-gradient: linear-gradient(
+        to right,
+        var(--pink),
+        var(--orange),
+        var(--yellow)
+    );
+    --blue-gradient: linear-gradient(
+        to bottom right, 
+        var(--green), 
+        var(--blue)
+    );
+
+    --media-width: 1000px;
+    --general-border-radius: 30px;
+    --inner-border-radius: 25px;
+    --general-border-width: 5px;
+    --line-height: 1.6em;
+}
+
+[data-theme="dark"] {
+    /* dark theme */
+    --background-color: #0d1117;
+    --content-bg-color: #22272e;
+    --special-bg-color: #1c2128;
+    --text-color: #c9d1d9;
+}
+
+#theme-toggle-button {
+    height: 60px;
+}
+#theme-toggle-button svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+}
+
+/* General */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: var(--line-height);
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not(.a-nav):not(.no_decoration):not(.text_over) {
+    background:
+        linear-gradient(
+            to right,
+            var(--blue),
+            var(--blue)
+        ),
+        linear-gradient(
+            to right,
+            var(--pink),
+            var(--orange),
+            var(--yellow)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+a:not(.nav_button):not(.no_decoration):not(.text_over):hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+a.current {
+    border: var(--cyan) var(--general-border-width) solid;
+}
+
+/* Fonts */
+p, li {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'JetBrains Regular', sans-serif;
+}
+
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.curly {
+    font-family: 'Macondo Swash Caps', cursive;
+}
+
+/* ########## Special classes ##########*/
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.special-content {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.bigger {
+    font-size: 4rem;
+}
+
+/* ########## header Front logo Onyr ########## */
+@media (max-width: 1000px) {
+    #front_logo_header {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    #front_logo {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    #front_logo_header {
+        width: 800px;
+        height: 800px;
+    }
+
+    #front_logo {
+        width: 500px;
+    }
+}
+
+#front_logo_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* center the box */
+    position: relative;
+    z-index: -10; /* allows not to hide nav buttons */
+}
+
+.circle_bg {
+    border-radius: 100%;
+}
+
+.main_logo_subelement {
+    position: absolute; /* allows centerings of shapes and logo */
+}
+
+.logo_shape {
+    animation: logoRotation 36s linear infinite;
+    -webkit-animation: logoRotation 36s linear infinite;
+}
+
+#mobile_shape_1 {
+    will-change: transform;
+    animation-delay: 0.6s;
+}
+
+#mobile_shape_2 {
+    animation-direction: reverse;
+    animation-play-state: paused;
+}
+
+#mobile_shape_3 {
+    animation-duration: 20s;
+    animation-delay: 0.5s;
+    will-change: transform;
+}
+
+#mobile_shape_4 {
+    animation-play-state: paused;
+}
+
+.stop_anim:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+@keyframes logoRotation {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+/* SVG logo */
+.logo-nav {
+    height: 80px;
+}
+
+#logo-frontpage-container {
+    border-radius: 2em;
+}
+.logo-frontpage {
+    /* align center */
+    width: 70vw;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Grid page layout */
+#general_header {
+    grid-area: header;
+}
+
+#navbar_spacer {
+    /* height controled in media */
+    grid-area: navspacer;
+}
+
+#footer_spacer {
+    height: 2em;
+    grid-area: footerspacer;
+}
+
+#general_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    grid-area: main;
+}
+
+#general_footer {
+    background: var(--special-bg-color);
+    grid-area: footer;
+}
+
+#grid-body-container {
+    display: grid;
+    grid-template-columns: 5% auto auto 5%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header header"
+        "navspacer navspacer navspacer navspacer"
+        ". main main ."
+        "footerspacer footerspacer footerspacer footerspacer"
+        "footer footer footer footer";
+}
+
+/* Content */
+#content {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: var(--general-border-radius);
+    background-color: var(--content-bg-color);
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: calc(1em + var(--line-height));;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--special-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsive nav, change flex to column */
+/* Change the layout when the viewport width is below 768px */
+@media (max-width: 1000px) {
+    /* Navbar */
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-element {
+        margin-top: 1em;
+    }
+
+    #navbar_spacer {
+        height: 0px;
+    }
+
+    #general_footer_container {
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+		text-align: center;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .navbar {
+        /* sticky navbar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+    
+    #navbar_spacer {
+        height: 140px;
+    }
+
+    #general_footer_container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.nav-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.nav_button, button:not(#theme-toggle-button) {
+    background:
+        linear-gradient(
+            /* Using trick of same color as borders while iddle for smooth cropping */
+            to right,
+            var(--yellow),
+            var(--text-color),
+            var(--text-color),
+            var(--text-color),
+            var(--yellow)
+        ),
+        linear-gradient(
+            to right,
+            var(--pink),
+            var(--orange),
+            var(--yellow)
+    );
+    /* controls the hover animation */
+    background-size: 100% 100%, 0 100%;
+    background-position: 100% 100%, 0 100%;
+    
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+
+    /* clip background to text */
+    background-clip: border-box;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*color: var(--text-normal);
+    text-decoration: none;*/
+    border: var(--yellow) var(--general-border-width) solid;
+    border-radius: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
+    cursor: pointer;
+}
+
+.nav_button:hover, button:not(#theme-toggle-button):hover {
+    border-color: var(--orange);
+    text-decoration: none;
+
+    /* controls the hover animation */
+    background-size: 0 100%, 100% 100%;
+
+    /* clip background to text */
+    background-clip: border-box;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Flexbox */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    width: 100%;
+}
+
+/* Footer */
+#general_footer {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+        to right,
+        var(--pink),
+        var(--orange),
+        var(--yellow)
+    );
+    border-radius: var(--general-border-radius);
+}
+
+#general_footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--special-bg-color);
+    border-radius: var(--inner-border-radius);
+    margin: var(--general-border-width); /* used as margin */
+    /* width: 95%; */
+    padding: 1em;
+    width: 100%;
+}
+
+#general_footer_container p {
+    display: block;
+    width: max-content;
+    padding: 0.2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+#heart { /* beating heart*/
+    display: inline-block;
+    
+}
+
+.heartBeat {
+    animation: heartBeat .25s infinite alternate;
+    -webkit-animation: heartBeat .25s infinite alternate;
+    transform-origin: center;
+    color: var(--orange);
+}
+
+@keyframes heartBeat {
+    0% {transform: scale(0.8);}
+    100% {transform: scale(1.2);}
+}
+
+/* Photos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* creates 2 columns with equal width */
+    grid-gap: 10px; /* adds some spacing between the images */
+}
+  
+.photo-grid img {
+    width: 100%; /* make the images fill the grid cells */
+    height: auto; /* maintain aspect ratio */
+    object-fit: cover; /* crop images to fill the cells */
+}
+
+#video_grotte_lourdes {
+    width: 80vw;
+    max-width: 1200px;
+    height: auto;
+}
+
+/* Code */
+code {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--special-bg-color);
+    color: var(--text-color);
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
