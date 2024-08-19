@@ -3,6 +3,7 @@
 + [ ] Add image overlay descriptions.
 + [ ] Add reading-page slider
 + [ ] Add correct code content wrap for better rendering.
++ [ ] Correct and make fully responsive, especially the main logo at front page.
 
 ## Logs
 
