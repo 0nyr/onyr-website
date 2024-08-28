@@ -279,7 +279,49 @@ h1, h2, h3, h4 {
     padding-right: 2em;
     padding-left: 2em;
     padding-top: 1em;
-    padding-bottom: calc(1em + var(--line-height));;
+    padding-bottom: calc(1em + var(--line-height));
+
+    /* Ensure the border radius affects the child elements */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Post with cover image */
+.cover-image {
+    max-width: 1260px;
+    border-top-left-radius: var(--general-border-radius);
+    border-top-right-radius: var(--general-border-radius);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.post_img_title {
+    color: #f2f5fb;
+    z-index: 10;
+    position: relative;
+}
+
+.post_img_title h1 {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.post_img_title p {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.post_spacer {
+    position: relative;
+    max-width: 1200px;
+}
+
+.post_img_title h1, .post_img_title p {
+    position: relative;
+    z-index: 10; /* Ensure the text is above the image */
 }
 
 /* Navigation */
@@ -288,6 +330,7 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 
 /* responsive nav, change flex to column */
@@ -303,7 +346,7 @@ h1, h2, h3, h4 {
     }
 
     #navbar_spacer {
-        height: 0px;
+        height: 40px;
     }
 
     #general_footer_container {
@@ -326,7 +369,7 @@ h1, h2, h3, h4 {
     }
     
     #navbar_spacer {
-        height: 140px;
+        height: 150px;
     }
 
     #general_footer_container {
