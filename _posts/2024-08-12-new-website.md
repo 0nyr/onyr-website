@@ -19,4 +19,4 @@ On March 14, 2023, after **25 days of travel** on the paths of Saint-James from 
 
 This day remains etched in my memory. I thank Jean-Louis Doux for his kindness, his advice, and his prayers.
 
-Today, nearly a year and a half later, this memory is still vivid. From now on, on some virtual paths of the Web, is a small beacon towards this resting place for travelers.
+Today, nearly a year and a half later, this memory is still vivid. From now on, on some virtual paths of the Web, is a small beacon towards this resting place for travelers: [La Ruche Lourdes website](https://0nyr.github.io/la-ruche-lourdes/).

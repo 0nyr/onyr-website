@@ -528,4 +528,7 @@ code {
     color: var(--text-color);
     padding: 0.3em;
     border-radius: 0.3em;
+    display: inline-block;
+    white-space: pre-wrap;     /* Allow line breaks when the line is too long */
+    word-wrap: break-word;
 }
