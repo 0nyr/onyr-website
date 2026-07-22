@@ -1,2 +1,5 @@
 url: "https://new.onyr.net"
 baseurl: ""
+umami:
+  script_url: "https://analytics.onyr.net/script.js"
+  website_id: "0070527f-1279-4a2a-8787-1c24857e87ab"

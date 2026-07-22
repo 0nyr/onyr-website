@@ -16,6 +16,9 @@
     <link rel="manifest" href="{{ site.baseurl }}/assets/favicons/site.webmanifest">
     {% feed_meta %}
     {% seo %}
+    {% if site.umami.website_id %}
+    <script defer src="{{ site.umami.script_url }}" data-website-id="{{ site.umami.website_id }}"></script>
+    {% endif %}
   </head>
   <body id="grid-body-container">
     <header id="general_header">
