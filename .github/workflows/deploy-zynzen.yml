@@ -1,0 +1,74 @@
+name: Deploy Jekyll site to Zynzen
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zynzen-onyr
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Build the Zynzen site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --config _config.yml,_config.zynzen.yml
+
+      - name: Configure deployment SSH
+        env:
+          ZYNZEN_SSH_KEY: ${{ secrets.ZYNZEN_SSH_KEY }}
+          ZYNZEN_KNOWN_HOSTS: ${{ secrets.ZYNZEN_KNOWN_HOSTS }}
+        run: |
+          install -d -m 0700 ~/.ssh
+          printf '%s\n' "$ZYNZEN_SSH_KEY" > ~/.ssh/zynzen_deploy
+          chmod 0600 ~/.ssh/zynzen_deploy
+          printf '%s\n' "$ZYNZEN_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 0644 ~/.ssh/known_hosts
+
+      - name: Upload and activate an immutable release
+        env:
+          ZYNZEN_HOST: ${{ secrets.ZYNZEN_HOST }}
+          ZYNZEN_USER: ${{ secrets.ZYNZEN_USER }}
+        run: |
+          set -euo pipefail
+          release_id="$(date -u +%Y%m%dT%H%M%SZ)-${GITHUB_SHA::8}"
+          remote_base=/srv/websites/onyr
+          remote_release="$remote_base/releases/$release_id"
+          ssh_args=(-i ~/.ssh/zynzen_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes)
+          ssh "${ssh_args[@]}" "$ZYNZEN_USER@$ZYNZEN_HOST" "mkdir -p '$remote_release'"
+          rsync -az --delete -e "ssh -i ~/.ssh/zynzen_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" _site/ "$ZYNZEN_USER@$ZYNZEN_HOST:$remote_release/"
+          ssh "${ssh_args[@]}" "$ZYNZEN_USER@$ZYNZEN_HOST" "RELEASE_ID='$release_id' bash -s" <<'REMOTE'
+          set -euo pipefail
+          base=/srv/websites/onyr
+          release="$base/releases/$RELEASE_ID"
+          test -s "$release/index.html"
+          cd "$base"
+          ln -s "releases/$RELEASE_ID" current.next
+          mv -Tf current.next current
+          active=$(readlink -f current)
+          mapfile -t releases < <(find releases -mindepth 1 -maxdepth 1 -type d -printf '%T@ %p\n' | sort -rn | cut -d' ' -f2-)
+          for ((i=5; i<${#releases[@]}; i++)); do
+            candidate=$(readlink -f "${releases[$i]}")
+            if [ "$candidate" != "$active" ]; then
+              rm -rf -- "${releases[$i]}"
+            fi
+          done
+          REMOTE
+
+      - name: Smoke test
+        run: |
+          curl --fail --silent --show-error --retry 8 --retry-delay 3 https://new.onyr.net/ >/dev/null
