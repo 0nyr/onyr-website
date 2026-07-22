@@ -3,7 +3,7 @@ layout: post
 title:  "Gurobi on NixOs"
 date:   2024-08-30 18:36:00 +0200
 author: 0nyr
-categories: code
+tags: [tech]
 ---
 
 ## Gurobi on NixOs

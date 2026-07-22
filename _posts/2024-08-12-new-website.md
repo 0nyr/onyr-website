@@ -3,7 +3,7 @@ layout: post
 title:  "New Website and Thanks"
 date:   2024-08-12 13:45:38 +0200
 author: 0nyr
-categories: release
+tags: [life, meta]
 ---
 
 ### New Website for "La Ruche"

@@ -3,7 +3,7 @@ layout: post
 title:  "New website and Jekyll on NixOs"
 date:   2024-08-10 09:53:38 +0200
 author: 0nyr
-categories: miscellaneous
+tags: [tech, meta]
 ---
 
 ### I made a new website for my programming association

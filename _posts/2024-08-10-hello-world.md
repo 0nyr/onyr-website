@@ -3,7 +3,7 @@ layout: post
 title:  "Hello World!"
 date:   2024-08-10 09:53:38 +0200
 author: 0nyr
-categories: miscellaneous
+tags: [meta]
 ---
 
 ### Hello World!
