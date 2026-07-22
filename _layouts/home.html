@@ -2,33 +2,49 @@
 layout: default
 ---
 
-<div id="front_logo_header">
-  <picture id="front_logo" class="main_logo_subelement">	<!-- WARN: ./ the dot is very important ! -->
-    <source srcset="{{ site.baseurl }}/assets/images/logos/front_logo/front_logo_onyr_500x500.webp"
-        type="image/webp">
-    <source srcset="{{ site.baseurl }}//home/onyr/code/onyr-website/assets/images/logos/front_logo/front_logo_onyr_500x500.png"
-        type="image/png" >
-    <img 	class="circle_bg"
-        src="{{ site.baseurl }}/home/onyr/code/onyr-website/assets/images/logos/front_logo/front_logo_onyr_500x500.png"
-        alt="logo, symbole onyr">
-  </picture>
-  <img class="logo_shape main_logo_subelement" id="mobile_shape_1" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_1.svg" alt="rotor 1">
-  <img class="logo_shape main_logo_subelement" id="mobile_shape_2" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_2.svg" alt="stator 2">
-  <img class="logo_shape main_logo_subelement" id="mobile_shape_3" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_3.svg" alt="rotor 3">
-  <img class="logo_shape main_logo_subelement" id="mobile_shape_4" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_4.svg" alt="stator 4">
-</div>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="hero-kicker">PhD · Operations Research · Lyon</p>
+    <h1 class="wordmark">Onyr<span class="wm-net">.net</span></h1>
+    <div class="hero-bar" aria-hidden="true"></div>
+    <div class="hero-tag">{{ content }}</div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+      <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About me</a>
+    </div>
+  </div>
 
-<div id="content">
-  {{ content }}
+  <div class="hero-logo">
+    <div id="front_logo_header">
+      <picture id="front_logo" class="main_logo_subelement">
+        <source srcset="{{ site.baseurl }}/assets/images/logos/front_logo/front_logo_onyr_500x500.webp" type="image/webp">
+        <source srcset="{{ site.baseurl }}/assets/images/logos/front_logo/front_logo_onyr_500x500.png" type="image/png">
+        <img class="circle_bg"
+          src="{{ site.baseurl }}/assets/images/logos/front_logo/front_logo_onyr_500x500.png"
+          alt="Onyr — chromanaryl color wheel">
+      </picture>
+      <img class="logo_shape main_logo_subelement" id="mobile_shape_1" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_1.svg" alt="">
+      <img class="logo_shape main_logo_subelement" id="mobile_shape_2" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_2.svg" alt="">
+      <img class="logo_shape main_logo_subelement" id="mobile_shape_3" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_3.svg" alt="">
+      <img class="logo_shape main_logo_subelement" id="mobile_shape_4" src="{{ site.baseurl }}/assets/images/logos/front_logo/mobile_shape_4.svg" alt="">
+    </div>
+  </div>
+</section>
 
-  <!-- List latest 3 posts -->
-  <h2>Last posts:</h2>
-  <ul>
-    {% for post in site.posts limit:5 %}
-      <li>
-        <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
-      </li>
+<section class="home-latest">
+  <div class="head">
+    <h2>Latest writing</h2>
+    <a class="see-all" href="{{ '/blog/' | relative_url }}">All posts →</a>
+  </div>
+  <div class="card-grid">
+    {% for post in site.posts limit:3 %}
+      <a class="post-card" href="{{ post.url | relative_url }}">
+        <span class="meta">{% if post.tags.size > 0 %}{{ post.tags | first }} · {% endif %}{{ post.date | date: "%d %b %Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        {% assign blurb = post.excerpt | strip_html | strip %}
+        {% if blurb != "" %}<p>{{ blurb | truncatewords: 18 }}</p>{% endif %}
+        <span class="read-more">Read →</span>
+      </a>
     {% endfor %}
-  </ul>
-  <a href="{{ site.baseurl }}/blog/">See all posts</a>
-</div>
+  </div>
+</section>

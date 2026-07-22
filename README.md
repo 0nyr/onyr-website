@@ -1,4 +1,4 @@
-# Website for "La Ruche", Lourdes, France: general information, showcase, portfolio & blog
+# [Onyr](https://github.com/0nyr)'s personal website
 
 ### Install setup
 
@@ -29,10 +29,10 @@ This website is built using [Jekyll](https://jekyllrb.com/).
 
 All content on the website is written in Markdown or HTML, with a preference for Markdown which is simple. Note that if you need punctually some HTML inside your Markdown file, you can use it directly inside.
 
-For emojis, please use [NerdFont Icons](https://www.nerdfonts.com/cheat-sheet), like in the example below:
+For icons, use inline SVG. The site no longer loads a webfont, so the old `nf` NerdFont classes will not render. Prefer small, monochrome SVGs that inherit `currentColor` so they follow the theme; see the GitHub mark in `_layouts/default.html` for an example.
 
 ```html
-I really <i class="nf nf-fa-heart"></i> <i class="nf nf-custom-vim"></i>
+<svg class="footer-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="…"/></svg>
 ```
 
 

@@ -1,17 +1,19 @@
 ---
 layout: default
 ---
-<div id="content">
-  <h1>{{ page.title }}</h1>
-  <p>
-      {{ page.date | date_to_string }}
-      {% assign author = site.members | where: 'short_name', page.author | first %}
-      {% if author %}
-        - <a href="{{ author.url }}">{{ author.short_name }}</a>
-      {% endif %}
-  </p>
+<article id="content">
+  <span class="article-eyebrow">{% if page.tags.size > 0 %}{{ page.tags | join: " · " }} · {% endif %}{{ page.date | date: "%d %b %Y" }}</span>
+  <h1 class="article-title">{{ page.title }}</h1>
+  <div class="article-meta">
+    <span>{{ page.date | date_to_string }}</span>
+    {% assign author = site.members | where: 'short_name', page.author | first %}
+    {% if author %}
+      <span><a href="{{ author.link | relative_url }}">{{ author.short_name }}</a></span>
+    {% elsif page.author %}
+      <span>{{ page.author }}</span>
+    {% endif %}
+  </div>
+  <div class="article-rule" aria-hidden="true"></div>
 
   {{ content }}
-
-  <p><a href="https://onyr.net/">Onyr</a></p>
-</div>
+</article>

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div id="content" class="project-page">
+  <p class="project-back"><a href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
+
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}<p class="project-summary"><em>{{ page.summary }}</em></p>{% endif %}
+
+  {% if page.image %}
+    <img class="project-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.links %}
+    <ul class="project-links">
+      {% for l in page.links %}
+        <li><a href="{{ l.url }}">{{ l.label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <p class="project-more"><a href="{{ '/publications/' | relative_url }}">See also: Publications &rarr;</a></p>
+</div>

@@ -1,14 +1,11 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Onyr.net
 permalink: /
 ---
 
-<!-- <div id="logo-frontpage-container" class="nav-container other-bg-color">
-  <img class="logo-frontpage" src="{{ site.baseurl }}/assets/images/photos/2023-03-15 11.11.57.jpg" alt="INSAlgo">
-</div> -->
+Welcome, traveler of the ethereal immensities. You have reached my little corner of the web.
 
-Welcome to you, traveler of the ethereal immensities. Here you are in my little virtual lands. Behold !
+I am **Florian Rascoussier**, also known as **Onyr**. By day I am a PhD student working on optimization and vehicle routing; the rest of the time I write, draw, and tinker. This site gathers three things I care about: science, art, and philosophy, along with a [blog]({{ '/blog/' | relative_url }}) where they occasionally collide.
+
+Have a look around: [about me]({{ '/about/' | relative_url }}), my [projects]({{ '/projects/' | relative_url }}), my [research]({{ '/publications/' | relative_url }}), or just the [latest posts]({{ '/blog/' | relative_url }}) below.
