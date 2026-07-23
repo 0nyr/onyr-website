@@ -6,9 +6,11 @@ author: 0nyr
 tags: [tech]
 ---
 
+Running a commercial solver on a purely declarative distribution is one of those small friction points that teaches you a lot about how your system actually fits together.
+
 ## Gurobi on NixOs
 
-This guide provide a full guide on manual and automated installation and usage of Gurobi on NixOs for C++ development. You can head directly to the automated section, and use the manual one for further reference. I recommend the [official tutorial on Gurobi on C++](https://support.gurobi.com/hc/en-us/articles/17307434813073-Tutorial-Getting-Started-with-the-Gurobi-C-API) for a smooth introduction to using the Gurobi API with C++.
+This guide presents both manual and automated installation and usage of Gurobi on NixOs for C++ development. You can head directly to the automated section, and use the manual one for further reference. I recommend the [official tutorial on Gurobi on C++](https://support.gurobi.com/hc/en-us/articles/17307434813073-Tutorial-Getting-Started-with-the-Gurobi-C-API) for a smooth introduction to using the Gurobi API with C++.
 
 ## Manual install and setup on NixOs
 
@@ -291,4 +293,8 @@ z 1
 Obj: 3
 ```
 
-That's how to get Gurobi to Work on NixOs.
+That's how to get Gurobi to Work on NixOs. 
+
+## Closing note
+
+This is the kind of setup that feels fiddly once and then never again. That is, in the end, the promise of the declarative approach.

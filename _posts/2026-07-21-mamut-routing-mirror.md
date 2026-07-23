@@ -24,7 +24,7 @@ As a small taste of the catalog, here is the [Poryos2026 time-dependent family](
 
 ### Why a personal mirror
 
-This is my own **independent mirror**, not a fork, though it might evolve in the future to include additional features or elements that matter to my PhD research. As of now, very page carries a disclosure banner making that clear and linking back to the source. The official site, [mamut-routing.univ-ubs.fr](https://mamut-routing.univ-ubs.fr/), is temporarily unavailable, so this mirror is a convenient stand-in in the meantime. When the official site is back, it remains the canonical reference. 
+This is my own **independent mirror**, not a fork, though it might evolve in the future to include additional features or elements that matter to my PhD research. As of now, every page carries a disclosure banner making that clear and linking back to the source. The official site, [mamut-routing.univ-ubs.fr](https://mamut-routing.univ-ubs.fr/), is temporarily unavailable, so this mirror is a convenient stand-in in the meantime. When the official site is back, it remains the canonical reference. 
 
 ### Links
 
