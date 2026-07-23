@@ -2,37 +2,31 @@
 layout: general
 title: Projects
 permalink: /projects/
+wide: true
 ---
 
 # Projects
 
-A selection of things I have built. Each card expands in place; follow a title for the full write-up on its own page.
+Things I have built, and places I have been. Each card opens a full write-up on its own page. For the academic record, see <a href="{{ '/publications/' | relative_url }}">Publications</a>.
 
-<p class="projects-see-also"><a href="{{ '/publications/' | relative_url }}">See also: Publications &rarr;</a></p>
-
-{% assign groups = "Research & software,Web,Earlier work" | split: "," %}
+{% assign groups = "Research & software|Web|Events|Earlier work" | split: "|" %}
 {% for g in groups %}
   <section class="project-group">
     <h2>{{ g }}</h2>
-    {% assign ps = site.projects | where: "group", g | sort: "weight" %}
-    <div class="project-cards">
+    {% assign ps = site.projects | where: "group", g | sort: "date" | reverse %}
+    <div class="card-grid project-grid">
       {% for p in ps %}
-        <details class="project-card">
-          <summary>
-            <span class="project-title">{{ p.title }}</span>
-            <span class="project-tagline">{{ p.summary }}</span>
-          </summary>
+        <a class="post-card project-card" href="{{ p.url | relative_url }}">
+          {% if p.thumb %}
+            <img class="project-card-thumb" src="{{ p.thumb | relative_url }}" alt="{{ p.thumb_alt | default: p.title }}" loading="lazy">
+          {% endif %}
           <div class="project-card-body">
-            {% if p.image %}<img class="project-thumb" src="{{ p.image | relative_url }}" alt="{{ p.image_alt | default: p.title }}">{% endif %}
-            <p>{{ p.blurb }}</p>
-            {% if p.links %}
-              <ul class="project-links">
-                {% for l in p.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
-              </ul>
-            {% endif %}
-            <p class="project-readmore"><a href="{{ p.url | relative_url }}">Read the full write-up &rarr;</a></p>
+            <span class="meta">{% if p.period %}{{ p.period }}{% endif %}{% if p.tags.size > 0 %}{% if p.period %} · {% endif %}{{ p.tags | join: " · " }}{% endif %}</span>
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.summary }}</p>
+            <span class="read-more">Read more &rarr;</span>
           </div>
-        </details>
+        </a>
       {% endfor %}
     </div>
   </section>

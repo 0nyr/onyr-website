@@ -11,8 +11,15 @@ I am a PhD student in Computer Science and Operations Research; my work centers 
 
 ## Papers
 
+### Full papers
+
 + Florian Rascoussier, Romain Billot, Lina Fahed, and Christine Solnon. **Impact of Scaling and Rounding on Metaheuristic Performance for the Vehicle Routing Problem with Time Windows.** In *16th Metaheuristics International Conference* (MIC 2026), Ischia, Italy, Springer, 2026. [HAL: hal-05646952](https://hal.science/hal-05646952) · [PDF](https://hal.science/hal-05646952v1/file/main.pdf)
 + Florian Rascoussier and Lise Lahoche. **Large Scale Heap Dump Embedding for Machine Learning: Predicting OpenSSH Key Locations.** In *ICT Systems Security and Privacy Protection* (IFIP SEC 2024), Springer Nature Switzerland, 2024, pp. 396–409. Introduces the Mem2Graph tool. [DOI: 10.1007/978-3-031-65175-5_28](https://link.springer.com/chapter/10.1007/978-3-031-65175-5_28) · [PDF (preprint)](https://hal.science/hal-05044177v1/file/masterarbeit_paper_submission_v1.pdf)
+
+### Short papers
+
++ Florian Rascoussier, Romain Billot, Lina Fahed, and Christine Solnon. **Randomized Constructive Heuristics for the VRPTW: A Focus on Regret-k.** In *ROADEF 2026, 27th annual congress of the Société Française de Recherche Opérationnelle et d'Aide à la Décision*, Tours, France, 2026. [HAL: hal-05646968](https://hal.science/hal-05646968) · [PDF](https://hal.science/hal-05646968v1/file/main.pdf)
++ Florian Rascoussier, Romain Billot, Lina Fahed, and Christine Solnon. **Branch & Price & Cut for the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW).** In *ROADEF 2025, 26th annual congress of the Société Française de Recherche Opérationnelle et d'Aide à la Décision*, Champs-sur-Marne, France, 2025, p. 731. [HAL: hal-05646977](https://hal.science/hal-05646977) · [PDF](https://hal.science/hal-05646977v1/file/main.pdf)
 
 ## Thesis
 

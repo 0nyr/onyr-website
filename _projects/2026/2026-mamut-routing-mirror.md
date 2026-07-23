@@ -1,7 +1,10 @@
 ---
 title: MAMUT-routing mirror
+slug: mamut-routing-mirror
 group: Research & software
-weight: 30
+date: 2026-07-21
+period: "2026 – present"
+tags: [research, web]
 summary: A personal, static mirror of the ANR-MAMUT benchmark catalog.
 blurb: >-
   An independent, static mirror of the ANR-MAMUT vehicle-routing benchmark catalog, built locally and served from my own server so the instances stay reachable.
@@ -15,4 +18,4 @@ The **MAMUT-routing mirror** is my own static copy of the benchmark and instance
 
 It is an independent mirror, not a fork: built locally from the public upstream repository and served from my personal server, with a disclosure banner on every page that links back to the source. It serves the catalog and family pages, the raw benchmark artifacts, and the per-city route geometries.
 
-See the [announcement post]({{ site.baseurl }}{% post_url 2026-07-21-mamut-routing-mirror %}) for more.
+See the [announcement post]({{ site.baseurl }}{% link _posts/2026/2026-07-21-mamut-routing-mirror.md %}) for more.

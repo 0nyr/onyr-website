@@ -38,7 +38,9 @@ collections:
     output: false
   projects:
     output: true
-    permalink: /projects/:name/
+    # URL is driven by the front-matter `slug`, not the filename, so project
+    # files can be renamed/dated and grouped into year subfolders freely.
+    permalink: /projects/:slug/
 
 defaults:
   - scope:

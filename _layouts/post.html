@@ -2,18 +2,29 @@
 layout: default
 ---
 <article id="content">
-  <span class="article-eyebrow">{% if page.tags.size > 0 %}{{ page.tags | join: " · " }} · {% endif %}{{ page.date | date: "%d %b %Y" }}</span>
-  <h1 class="article-title">{{ page.title }}</h1>
-  <div class="article-meta">
-    <span>{{ page.date | date_to_string }}</span>
-    {% assign author = site.members | where: 'short_name', page.author | first %}
-    {% if author %}
-      <span><a href="{{ author.link | relative_url }}">{{ author.short_name }}</a></span>
-    {% elsif page.author %}
-      <span>{{ page.author }}</span>
-    {% endif %}
-  </div>
-  <div class="article-rule" aria-hidden="true"></div>
+  {% assign author = site.members | where: 'short_name', page.author | first %}
+  {% capture article_header %}
+    <span class="article-eyebrow">{% if page.tags.size > 0 %}{{ page.tags | join: " · " }} · {% endif %}{{ page.date | date: "%d %b %Y" }}</span>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <div class="article-meta">
+      <span>{{ page.date | date_to_string }}</span>
+      {% if author %}
+        <span><a href="{{ author.link | relative_url }}">{{ author.short_name }}</a></span>
+      {% elsif page.author %}
+        <span>{{ page.author }}</span>
+      {% endif %}
+    </div>
+    <div class="article-rule" aria-hidden="true"></div>
+  {% endcapture %}
+
+  {% if page.cover %}
+    <div class="post-hero">
+      <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
+      <div class="post-hero-text">{{ article_header }}</div>
+    </div>
+  {% else %}
+    {{ article_header }}
+  {% endif %}
 
   {{ content }}
 </article>

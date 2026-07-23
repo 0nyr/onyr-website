@@ -9,8 +9,8 @@ tags: [life, meta]
 ### New Website for "La Ruche"
 
 <div class="photo-grid">
-    <img src="{{ site.baseurl }}/assets/images/posts/2024-08-12/IMG_1528_onyr_2023_02_24.jpg" alt="Photo 1: Onyr in the icy mists of Mount Aigoual, Gard department, France.">
-    <img src="{{ site.baseurl }}/assets/images/posts/2024-08-12/IMG_6545_onyr_2023_03_14.jpg" alt="Photo 2: Onyr in a winter forest.">
+    <img src="{{ site.baseurl }}/assets/images/posts/2024-08-12/IMG_1528_onyr_2023_02_24.webp" alt="Photo 1: Onyr in the icy mists of Mount Aigoual, Gard department, France.">
+    <img src="{{ site.baseurl }}/assets/images/posts/2024-08-12/IMG_6545_onyr_2023_03_14.webp" alt="Photo 2: Onyr in a winter forest.">
 </div>
 
 *Selfies from my pilgrimage **#Lyon2Lourdes**, the first part of my journey to Saint-James of Compostela, in the middle of winter 2023.*

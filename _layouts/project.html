@@ -1,25 +1,30 @@
 ---
 layout: default
 ---
-<div id="content" class="project-page">
-  <p class="project-back"><a href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
+<article id="content" class="project-page">
+  <p class="project-back"><a class="no_decoration" href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
 
-  <h1>{{ page.title }}</h1>
-  {% if page.summary %}<p class="project-summary"><em>{{ page.summary }}</em></p>{% endif %}
+  <span class="article-eyebrow">{% if page.tags.size > 0 %}{{ page.tags | join: " · " }}{% endif %}{% if page.period %}{% if page.tags.size > 0 %} · {% endif %}{{ page.period }}{% endif %}</span>
+  <h1 class="article-title">{{ page.title }}</h1>
+  {% if page.summary %}<p class="project-summary">{{ page.summary }}</p>{% endif %}
+  <div class="article-rule" aria-hidden="true"></div>
 
   {% if page.image %}
-    <img class="project-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+    <img class="project-image{% if page.image_portrait %} project-image--tall{% endif %}" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
   {% endif %}
 
   {{ content }}
 
   {% if page.links %}
-    <ul class="project-links">
-      {% for l in page.links %}
-        <li><a href="{{ l.url }}">{{ l.label }}</a></li>
-      {% endfor %}
-    </ul>
+    <section class="project-links-block">
+      <h2>Links</h2>
+      <ul class="project-links">
+        {% for l in page.links %}
+          <li><a href="{{ l.url }}">{{ l.label }}</a><span class="project-link-url">{{ l.url }}</span></li>
+        {% endfor %}
+      </ul>
+    </section>
   {% endif %}
 
   <p class="project-more"><a href="{{ '/publications/' | relative_url }}">See also: Publications &rarr;</a></p>
-</div>
+</article>

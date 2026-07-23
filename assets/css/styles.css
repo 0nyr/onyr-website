@@ -260,12 +260,15 @@ body.is-home #general_footer { background: transparent; }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .post-card {
   position: relative; overflow: hidden; display: block; text-decoration: none; color: inherit;
-  background: var(--surface); border: 1px solid var(--div); border-radius: var(--radius);
+  background-color: var(--surface); border: 1px solid var(--div); border-radius: var(--radius);
   padding: 18px 18px 16px; box-shadow: var(--shadow);
-  transition: transform 0.16s ease, border-color 0.16s ease;
+  /* rainbow bar that sweeps in along the bottom edge on hover — the same effect project cards
+     (inside #content) and blog-list links already get, brought to home cards outside #content */
+  background-image: var(--wheel); background-size: 0% 2px; background-repeat: no-repeat; background-position: 0 100%;
+  transition: transform 0.16s ease, border-color 0.16s ease, background-size 0.2s ease;
 }
 .post-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--wheel); }
-.post-card:hover { transform: translateY(-3px); border-color: var(--edge); }
+.post-card:hover { transform: translateY(-3px); border-color: var(--edge); background-size: 100% 2px; }
 .post-card .meta { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mut); }
 .post-card h3 { font-size: 1.1rem; margin: 8px 0; }
 .post-card p { font-size: 0.9rem; color: var(--mut); margin: 0 0 12px; }
@@ -277,7 +280,7 @@ body.is-home #general_footer { background: transparent; }
   width: min(100%, 780px);
   margin: 10px auto 0;
   padding: 22px 22px 0;
-  position: relative;   /* anchor for cover-image posts */
+  position: relative;
 }
 
 /* Prose rhythm inside reading surfaces */
@@ -384,16 +387,60 @@ pre code { background: none; padding: 0; font-size: 0.85rem; line-height: 1.6; c
   border: 1px solid var(--div); box-shadow: var(--shadow);
 }
 
-/* ══ Cover-image posts (simple-post layout) ════════════════════════ */
-.cover-image {
-  width: 100%; max-height: 520px; object-fit: cover;
-  position: absolute; top: 0; left: 0; z-index: 1;
-  border-top-left-radius: var(--radius); border-top-right-radius: var(--radius);
+/* ══ Cover-image posts: overlay hero (post.html, page.cover) ═══════ */
+.post-hero {
+  position: relative; overflow: hidden;
+  margin: 0 0 28px; border-radius: var(--radius-sm);
+  border: 1px solid var(--div); box-shadow: var(--shadow);
 }
-.post_img_title { position: relative; z-index: 10; color: #f6f5f0; }
-.post_img_title h1 { font-size: clamp(32px, 6vw, 3em); line-height: 1.05; color: #fff; }
-.post_img_title p { font-size: 1.2em; line-height: 1.1; }
-.post_spacer { position: relative; max-width: 1200px; }
+.post-hero img { display: block; width: 100%; max-height: 480px; object-fit: cover; border-radius: 0; }
+.post-hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(12, 12, 28, 0) 38%, rgba(12, 12, 28, 0.78) 100%);
+}
+.post-hero-text { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 20px 24px 18px; }
+.post-hero-text .article-eyebrow { color: rgba(255, 255, 255, 0.85); margin-bottom: 6px; }
+.post-hero-text .article-title { color: #fff; margin: 0; }
+.post-hero-text .article-meta { color: rgba(255, 255, 255, 0.85); margin: 8px 0 0; }
+.post-hero-text .article-rule { margin: 14px 0 2px; }
+.post-hero-text a { color: #9be1f0; }
+
+/* ══ Projects: boards of cards + project pages ═════════════════════ */
+#content.content-wide { width: min(100%, var(--maxw)); }
+.project-group { max-width: none; }
+.project-group h2 { margin: 2.2em 0 0.8em; }
+.project-group:first-of-type h2 { margin-top: 1.2em; }
+/* cards: reuse .post-card; zero the padding so thumbs can bleed to the edges */
+.project-card { padding: 0; display: flex; flex-direction: column; }
+.project-card-thumb {
+  display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+  border-radius: 0; margin-top: 3px;  /* sits below the rainbow top bar */
+}
+.project-card .project-card-body { padding: 16px 18px 14px; display: flex; flex-direction: column; flex: 1; }
+.project-card .project-card-body p { flex: 1; }
+.project-card .read-more { margin-top: auto; }
+
+/* project pages (project.html) */
+.project-back { font-family: var(--mono); font-size: 0.8rem; margin: 0 0 18px; }
+.project-back a { color: var(--mut); }
+.project-back a:hover { color: var(--accent-text); }
+.project-summary { font-size: 1.15rem; color: var(--mut); margin: 10px 0 0; max-width: var(--readw); }
+.project-image { display: block; width: 100%; margin: 0 0 1.4em; }
+/* portrait / tall hero images: cap height and centre instead of filling the column */
+.project-image--tall { width: auto; max-width: 100%; max-height: 70vh; margin-left: auto; margin-right: auto; }
+/* inline figures inside project body copy */
+.project-figure { margin: 0 auto 1.4em; text-align: center; max-width: var(--readw); }
+.project-figure img { display: block; margin: 0 auto; width: 260px; max-width: 100%; }
+.project-figure figcaption { font-family: var(--mono); font-size: 0.78rem; color: var(--mut); margin-top: 8px; }
+.project-links-block { margin-top: 2em; }
+.project-links { list-style: none; margin: 0 0 1.2em; padding: 0; max-width: var(--readw); }
+.project-links li {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px;
+  padding: 9px 0; border-bottom: 1px solid var(--div);
+}
+.project-links li a { font-weight: 700; }
+.project-link-url { font-family: var(--mono); font-size: 0.75rem; color: var(--mut); overflow-wrap: anywhere; }
+.project-more { margin-top: 2em; }
 
 /* ══ Photos / media ═════════════════════════════════════════════════ */
 .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
