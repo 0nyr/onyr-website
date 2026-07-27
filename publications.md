@@ -28,17 +28,18 @@ I am a PhD student in Computer Science and Operations Research; my work centers 
 
 ## Software and datasets
 
-+ **Kayros** solver (2026): [github.com/0nyr/kayros](https://github.com/0nyr/kayros), [PyPI](https://pypi.org/project/kayros/).
++ **Kayros** solver (2026): [github.com/0nyr/kayros](https://github.com/0nyr/kayros) · [PyPI](https://pypi.org/project/kayros/) · [HAL](https://hal.science/hal-05697652)
 + **Poryos2026** benchmark family (2026): [family page](https://mamut-routing.onyr.net/benchmarks/tdvrptw/poryos2026/), available through the [`mamut-routing-lib`](https://pypi.org/project/mamut-routing-lib/) library. [github.com/ANR-MAMUT/MAMUT-routing-Poryos2026](https://github.com/ANR-MAMUT/MAMUT-routing-Poryos2026)
-+ **MAMUT-routing** (2026): [github.com/ANR-MAMUT/MAMUT-routing](https://github.com/ANR-MAMUT/MAMUT-routing/commits/main/).
-+ **mamut-routing-lib** (2026): [github.com/0nyr/mamut-routing-lib](https://github.com/ANR-MAMUT/mamut-routing-lib), [PyPI](https://pypi.org/project/mamut-routing-lib/).
-+ **mamut-routing-tools** (2026): [github.com/0nyr/mamut-routing-tools](https://github.com/ANR-MAMUT/mamut-routing-tools), [PyPI](https://pypi.org/project/mamut-routing-tools/).
-+ **mem2graph** (2023): [github.com/passau-masterarbeit-2023/mem2graph](https://github.com/passau-masterarbeit-2023/mem2graph).
++ **MAMUT-routing** (2026): [github.com/ANR-MAMUT/MAMUT-routing](https://github.com/ANR-MAMUT/MAMUT-routing/commits/main/) · [Official website](https://mamut-routing.univ-ubs.fr/) · [personal mirror](https://mamut-routing.onyr.net/index.html) · [HAL](https://hal.science/hal-05629810)
++ **mamut-routing-lib** (2026): [github.com/ANR-MAMUT/mamut-routing-lib](https://github.com/ANR-MAMUT/mamut-routing-lib) · [PyPI](https://pypi.org/project/mamut-routing-lib/)
++ **mamut-routing-tools** (2026): [github.com/ANR-MAMUT/mamut-routing-tools](https://github.com/ANR-MAMUT/mamut-routing-tools) · [PyPI](https://pypi.org/project/mamut-routing-tools/)
++ **mem2graph** (2023): [github.com/passau-masterarbeit-2023/mem2graph](https://github.com/passau-masterarbeit-2023/mem2graph)
 
 ## Academic profiles
 
 + **Google Scholar**: [scholar.google.com/citations](https://scholar.google.com/citations?hl=en&user=3YCbbfIAAAAJ)
 + **ORCID**: [0009-0005-3253-9814](https://orcid.org/0009-0005-3253-9814)
++ **ArXiv**: [arxiv.org/a/rascoussier_f_1](https://arxiv.org/a/rascoussier_f_1)
 + **HAL**: [hal.science](https://hal.science/search/index/?q=*&authIdPerson_i=1376402)
 + **ResearchGate**: [Florian-Rascoussier](https://www.researchgate.net/profile/Florian-Rascoussier)
 + **Zenodo**: [my records](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Rascoussier%2C%20Florian%20Onyr%22&l=list&p=1&s=10&sort=bestmatch)
