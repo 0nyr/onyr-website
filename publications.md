@@ -34,6 +34,7 @@ I am a PhD student in Computer Science and Operations Research; my work centers 
 + **mamut-routing-lib** (2026): [github.com/ANR-MAMUT/mamut-routing-lib](https://github.com/ANR-MAMUT/mamut-routing-lib) · [PyPI](https://pypi.org/project/mamut-routing-lib/)
 + **mamut-routing-tools** (2026): [github.com/ANR-MAMUT/mamut-routing-tools](https://github.com/ANR-MAMUT/mamut-routing-tools) · [PyPI](https://pypi.org/project/mamut-routing-tools/)
 + **mem2graph** (2023): [github.com/passau-masterarbeit-2023/mem2graph](https://github.com/passau-masterarbeit-2023/mem2graph)
++ **mem2graph-dataset** (2023): [zenodo.org/records/10514199](https://zenodo.org/records/10514199)
 
 ## Academic profiles
 
