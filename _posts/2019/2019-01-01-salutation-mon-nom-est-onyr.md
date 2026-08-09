@@ -4,6 +4,7 @@ title:  "Salutation... Mon nom est Onyr"
 date:   2019-01-01 12:00:00 +0200
 author: 0nyr
 tags: [art]
+summary: Poème de présentation d'Onyr, mon nom de plume, repris de la toute première version de onyr.net.
 ---
 
 *Poème de présentation d'Onyr, mon nom de plume. Repris de la toute première version de onyr.net (non daté ; placé au début du parcours).*

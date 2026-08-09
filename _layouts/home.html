@@ -38,13 +38,7 @@ layout: default
   </div>
   <div class="card-grid">
     {% for post in site.posts limit:3 %}
-      <a class="post-card" href="{{ post.url | relative_url }}">
-        <span class="meta">{% if post.tags.size > 0 %}{{ post.tags | first }} · {% endif %}{{ post.date | date: "%d %b %Y" }}</span>
-        <h3>{{ post.title }}</h3>
-        {% assign blurb = post.excerpt | strip_html | strip %}
-        {% if blurb != "" %}<p>{{ blurb | truncatewords: 18 }}</p>{% endif %}
-        <span class="read-more">Read →</span>
-      </a>
+      {% include entry-card.html item=post %}
     {% endfor %}
   </div>
 </section>

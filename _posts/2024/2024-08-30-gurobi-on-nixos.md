@@ -4,6 +4,7 @@ title:  "Gurobi on NixOs"
 date:   2024-08-30 18:36:00 +0200
 author: 0nyr
 tags: [tech]
+summary: Installing and using the Gurobi solver for C++ development on NixOS, first by hand, then automated with a flake.
 ---
 
 Running a commercial solver on a purely declarative distribution is one of those small friction points that teaches you a lot about how your system actually fits together.

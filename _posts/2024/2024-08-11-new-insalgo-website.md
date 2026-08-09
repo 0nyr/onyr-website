@@ -4,9 +4,10 @@ title:  "New website and Jekyll on NixOs"
 date:   2024-08-10 09:53:38 +0200
 author: 0nyr
 tags: [tech, meta]
+summary: A new Jekyll website for INSAlgo, my programming association, and the fight to get Jekyll and its bundler to behave on NixOS.
 ---
 
-### I made a new website for my programming association
+## I made a new website for my programming association
 
 It is now time to unleash the new baby website of my programming association: [insalgo.fr](https://insalgo.fr)
 
@@ -14,7 +15,7 @@ This project is based on [Jekyll](https://jekyllrb.com/), a popular tool to gene
 
 It took me around 5h to install and parameter Jekyll on my [NixOs-powered laptop](). After around 1 year on this amazing distro, I tend to be pretty effective when having to deal with software install. However, getting Jekyll to work on my dev environment was less easy that the widespreadness of this tool was hinting to me.
 
-### Making Jekyll work on NixOs 
+## Making Jekyll work on NixOs 
 
 First, I discovered not a single `flake.nix` file on the whole GitHub with Jekyll properly configured with a theme like Minima, since I was trying to follow the tutorial. So I had to make my own. Second, installing the package `minima` into `buildInputs` was not making this package discoverable for the bundler of `rubyPackages.jekyll`.
 

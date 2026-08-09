@@ -15,16 +15,7 @@ layout: default
 
   {{ content }}
 
-  {% if page.links %}
-    <section class="project-links-block">
-      <h2>Links</h2>
-      <ul class="project-links">
-        {% for l in page.links %}
-          <li><a href="{{ l.url }}">{{ l.label }}</a><span class="project-link-url">{{ l.url }}</span></li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endif %}
+  {% include links-section.html %}
 
   <p class="project-more"><a href="{{ '/publications/' | relative_url }}">See also: Publications &rarr;</a></p>
 </article>

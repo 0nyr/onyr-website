@@ -4,6 +4,7 @@ title:  "Les mots et les maux"
 date:   2019-09-14 12:00:00 +0200
 author: 0nyr
 tags: [art]
+summary: Poème de septembre 2019 sur les mots, tour à tour eau, larmes, feu et sang, repris de la toute première version de onyr.net.
 ---
 
 *Poème du 14 septembre 2019. Repris de la toute première version de onyr.net.*

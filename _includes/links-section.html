@@ -1,0 +1,21 @@
+{%- comment -%}
+Shared "Links" block for posts and projects.
+
+Links are registered in front matter as a `links:` list of `{label, url}`
+entries, never hand-written in the body:
+
+    links:
+      - {label: "Source (GitHub)", url: "https://github.com/0nyr/kayros"}
+
+Rendered at the end of the article: label as the anchor, raw URL beside it.
+{%- endcomment -%}
+{% if page.links %}
+  <section class="links-block">
+    <h2>Links</h2>
+    <ul class="links-list">
+      {% for l in page.links %}
+        <li><a href="{{ l.url }}">{{ l.label }}</a><span class="link-url">{{ l.url }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

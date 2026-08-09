@@ -4,9 +4,8 @@ title:  "New Website and Thanks"
 date:   2024-08-12 13:45:38 +0200
 author: 0nyr
 tags: [life, meta]
+summary: La Ruche, a small website built as a beacon for pilgrims, and the memory of my 25-day winter walk from Lyon to Lourdes.
 ---
-
-### New Website for "La Ruche"
 
 <div class="photo-grid">
     <img src="{{ site.baseurl }}/assets/images/posts/2024-08-12/IMG_1528_onyr_2023_02_24.webp" alt="Photo 1: Onyr in the icy mists of Mount Aigoual, Gard department, France.">

@@ -1,0 +1,31 @@
+{%- comment -%}
+Shared card for the projects board, the blog list and the home page.
+
+Parameters:
+  item  — a post or project document (required)
+  class — extra classes on the card anchor (e.g. the "blog-item" filter hook)
+  data  — extra raw HTML attributes, used by blog-filter.js for its data-* hooks
+
+Cards show, in order: an optional thumbnail (`thumb`, falling back to a post's
+`cover`), a mono meta line (`period` if set, otherwise the date, then tags),
+the title, the `summary`, and a "Read more" affordance. Posts and projects
+therefore register card content the same way, through front matter.
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- assign thumb = item.thumb | default: item.cover -%}
+{%- if item.summary -%}
+  {%- assign card_summary = item.summary -%}
+{%- else -%}
+  {%- assign card_summary = item.excerpt | strip_html | strip | truncatewords: 24 -%}
+{%- endif -%}
+<a class="post-card entry-card {{ include.class }}" href="{{ item.url | relative_url }}" {{ include.data }}>
+  {% if thumb %}
+    <img class="entry-card-thumb" src="{{ thumb | relative_url }}" alt="{{ item.thumb_alt | default: item.cover_alt | default: item.title }}" loading="lazy">
+  {% endif %}
+  <div class="entry-card-body">
+    <span class="meta">{% if item.period %}{{ item.period }}{% else %}{{ item.date | date: "%d %b %Y" }}{% endif %}{% if item.tags.size > 0 %} · {{ item.tags | join: " · " }}{% endif %}</span>
+    <h3>{{ item.title }}</h3>
+    {% if card_summary != "" %}<p>{{ card_summary }}</p>{% endif %}
+    <span class="read-more">Read more &rarr;</span>
+  </div>
+</a>

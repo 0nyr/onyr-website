@@ -4,6 +4,7 @@ title:  "Nocturne Parure"
 date:   2020-01-01 12:00:00 +0200
 author: 0nyr
 tags: [art]
+summary: Poème composé en 2019-2020, une nuit d'astres et de ténèbres, repris de la toute première version de onyr.net.
 ---
 
 *Poème composé en 2019–2020. Repris de la toute première version de onyr.net.*

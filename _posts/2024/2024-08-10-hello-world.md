@@ -4,9 +4,8 @@ title:  "Hello World!"
 date:   2024-08-10 09:53:38 +0200
 author: 0nyr
 tags: [meta]
+summary: The very first post of this website. And so it begins.
 ---
-
-### Hello World!
 
 And so it begins...
 

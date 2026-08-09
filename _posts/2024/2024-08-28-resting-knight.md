@@ -4,6 +4,7 @@ title:  "Le chevalier du soir"
 date:   2024-08-28 23:51:00 +0200
 author: 0nyr
 tags: [art]
+summary: "Court texte : le repos d'un chevalier errant, assis dans une plaine herbeuse au soleil couchant."
 cover: /assets/images/posts/2024-08-28/resting-knight.webp
 cover_alt: "Un chevalier en armure assis dans une plaine herbeuse au soleil couchant."
 ---
