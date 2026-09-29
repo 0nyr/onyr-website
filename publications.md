@@ -21,6 +21,16 @@ I am a PhD student in Computer Science and Operations Research; my work centers 
 + Florian Rascoussier, Romain Billot, Lina Fahed, and Christine Solnon. **Randomized Constructive Heuristics for the VRPTW: A Focus on Regret-k.** In *ROADEF 2026, 27th annual congress of the Société Française de Recherche Opérationnelle et d'Aide à la Décision*, Tours, France, 2026. [HAL: hal-05646968](https://hal.science/hal-05646968) · [PDF](https://hal.science/hal-05646968v1/file/main.pdf)
 + Florian Rascoussier, Romain Billot, Lina Fahed, and Christine Solnon. **Branch & Price & Cut for the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW).** In *ROADEF 2025, 26th annual congress of the Société Française de Recherche Opérationnelle et d'Aide à la Décision*, Champs-sur-Marne, France, 2025, p. 731. [HAL: hal-05646977](https://hal.science/hal-05646977) · [PDF](https://hal.science/hal-05646977v1/file/main.pdf)
 
+### Preprints
+
++ Florian Rascoussier. **KAYROS: An Anytime and Exact Solver for the Time-Dependent Vehicle Routing Problem with Time Windows - Extended Version.** arXiv preprint, 2026. [arXiv:2609.29597v1](https://arxiv.org/abs/2609.29597v1).
++ Florian Rascoussier. **Anytime Solver Evaluation with a Normalized Signed Primal Integral and Explicit Reference Policies - Extended Version.** arXiv preprint, 2026. [arXiv:2608.18288v2](https://arxiv.org/abs/2608.18288v2).
+
+### Reports
+
++ Florian Rascoussier. **KAYROS: An Anytime and Exact Open-Source Solver for Duration-Minimization Time-Dependent Vehicle Routing. A Technical Report and a Case Study in Human-AI Engineering.** Technical report, 2026. [arXiv:2607.23116v2](https://arxiv.org/abs/2607.23116v2).
++ Florian Rascoussier. **Thread Scaling of Hexaly on the TDVRPTW across Two Model Encodings. An Experimental Report: Binding Choice, Slice-Count Choice, and Two Thread Ladders.** Experimental report, 2026. [arXiv:2608.10079v2](https://arxiv.org/abs/2608.10079v2).
+
 ## Thesis
 
 + PhD thesis, *in progress* (Computer Science, IMT Atlantique and INSA Lyon, 2024–2027).
