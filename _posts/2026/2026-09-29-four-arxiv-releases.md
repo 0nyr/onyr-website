@@ -6,7 +6,7 @@ author: 0nyr
 tags: [research, tech]
 summary: "Two papers and two reports connect the Kayros solver, its evaluation method, benchmark construction, and a separate Hexaly scaling study."
 links:
-  - {label: "Kayros paper (arXiv v1)", url: "https://arxiv.org/abs/2609.29597v1"}
+  - {label: "Kayros paper (arXiv v2)", url: "https://arxiv.org/abs/2609.29597v2"}
   - {label: "Anytime evaluation paper (arXiv v2)", url: "https://arxiv.org/abs/2608.18288v2"}
   - {label: "Kayros technical report (arXiv v2)", url: "https://arxiv.org/abs/2607.23116v2"}
   - {label: "Hexaly experimental report (arXiv v2)", url: "https://arxiv.org/abs/2608.10079v2"}
@@ -14,9 +14,11 @@ links:
 
 Four pieces of my doctoral research are now available on arXiv: two papers and two reports. They share a setting, the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW), but answer different questions about solving it, measuring progress, constructing benchmarks, and using multiple threads in a competing solver.
 
+**Update (1 October 2026).** The Kayros paper is now available in its [second arXiv version](https://arxiv.org/abs/2609.29597v2). The links below point to v2.
+
 ## Kayros: the solver and its evaluation
 
-The [Kayros paper](https://arxiv.org/abs/2609.29597v1) presents an [open-source solver](https://github.com/0nyr/kayros) that produces improving solutions during a run and can also issue computational optimality certificates under explicit assumptions. It develops the treatment of time-dependent arrival functions and evaluates the anytime and exact components on published routing instances. On a campaign of 212 instances from five families, with a one-hour single-threaded budget, Kayros achieves a pooled anytime score 63.3% lower than Timefold, the strongest of the three available contenders in that comparison. The paper also reports 704 published computational certificates as of 8 August 2026. Those certificates cover particular instances under the paper's stated protocol, not every benchmark family or instance size.
+The [Kayros paper](https://arxiv.org/abs/2609.29597v2) presents an [open-source solver](https://github.com/0nyr/kayros) that produces improving solutions during a run and can also issue computational optimality certificates under explicit assumptions. It develops the treatment of time-dependent arrival functions and evaluates the anytime and exact components on published routing instances. On a campaign of 212 instances from five families, with a one-hour single-threaded budget, Kayros achieves a pooled anytime score 63.3% lower than Timefold, the strongest of the three available contenders in that comparison. The paper also reports 704 published computational certificates as of 8 August 2026. Those certificates cover particular instances under the paper's stated protocol, not every benchmark family or instance size.
 
 The companion [anytime evaluation paper](https://arxiv.org/abs/2608.18288v2) examines how to compare solvers that may find a first feasible solution at different times and then continue improving it. It develops a normalized signed primal integral (Λ), including a defined score for runs with no valid incumbent and a way to retain improvements below a frozen reference value. Its v2 analysis remeasures the descriptive time-sliced Hexaly arm and two model-fidelity ladders through the C++ binding at 10 seeds. This paper gives the measurement choices behind the Kayros comparison their own examination.
 

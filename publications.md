@@ -23,7 +23,7 @@ I am a PhD student in Computer Science and Operations Research; my work centers 
 
 ### Preprints
 
-+ Florian Rascoussier. **KAYROS: An Anytime and Exact Solver for the Time-Dependent Vehicle Routing Problem with Time Windows - Extended Version.** arXiv preprint, 2026. [arXiv:2609.29597v1](https://arxiv.org/abs/2609.29597v1).
++ Florian Rascoussier. **KAYROS: An Anytime and Exact Solver for the Time-Dependent Vehicle Routing Problem with Time Windows - Extended Version.** arXiv preprint, 2026. [arXiv:2609.29597v2](https://arxiv.org/abs/2609.29597v2).
 + Florian Rascoussier. **Anytime Solver Evaluation with a Normalized Signed Primal Integral and Explicit Reference Policies - Extended Version.** arXiv preprint, 2026. [arXiv:2608.18288v2](https://arxiv.org/abs/2608.18288v2).
 
 ### Reports

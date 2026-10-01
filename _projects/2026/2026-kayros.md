@@ -13,7 +13,7 @@ links:
   - {label: "PyPI", url: "https://pypi.org/project/kayros/"}
   - {label: "Reddit r/optimization post", url: "https://www.reddit.com/r/optimization/comments/1v8t68v/kayros_an_opensource_exact_and_anytime_solver_for/"}
   - {label: "LinkedIn announcement post", url: "https://www.linkedin.com/posts/florian-rascoussier-onyr_kayros-an-anytime-and-exact-open-source-activity-7487836560994824192-ahZs?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcIsOkB0IhxGhcova4MtLZJQQzTt0Z5e0Q"}
-  - {label: "Kayros paper (arXiv v1)", url: "https://arxiv.org/abs/2609.29597v1"}
+  - {label: "Kayros paper (arXiv v2)", url: "https://arxiv.org/abs/2609.29597v2"}
   - {label: "Technical report (arXiv v2)", url: "https://arxiv.org/abs/2607.23116v2"}
 ---
 
@@ -21,4 +21,4 @@ links:
 
 It runs in two modes on a single engine: an anytime heuristic that returns steadily improving solutions under any time budget, and an exact branch-price-and-cut mode that can certify optimality. The exact side runs on the open-source HiGHS solver, so no commercial license is required.
 
-It is developed as part of my PhD and installable with `pip install kayros` (MIT, Python 3.11+). The [Kayros paper](https://arxiv.org/abs/2609.29597v1) evaluates its anytime and exact components, while the [technical report](https://arxiv.org/abs/2607.23116v2) documents the solver, benchmarks, and verification process. See the [original announcement]({{ site.baseurl }}{% link _posts/2026/2026-07-22-kayros-poryos2026.md %}) and the [research overview]({{ site.baseurl }}{% link _posts/2026/2026-09-29-four-arxiv-releases.md %}) for more.
+It is developed as part of my PhD and installable with `pip install kayros` (MIT, Python 3.11+). The [Kayros paper](https://arxiv.org/abs/2609.29597v2) evaluates its anytime and exact components, while the [technical report](https://arxiv.org/abs/2607.23116v2) documents the solver, benchmarks, and verification process. See the [original announcement]({{ site.baseurl }}{% link _posts/2026/2026-07-22-kayros-poryos2026.md %}) and the [research overview]({{ site.baseurl }}{% link _posts/2026/2026-09-29-four-arxiv-releases.md %}) for more.
