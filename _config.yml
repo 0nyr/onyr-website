@@ -77,3 +77,20 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Files of the repository that are not part of the site. The list repeats the defaults of
+# Jekyll, since Jekyll 3 replaces its default list when `exclude` is set.
+exclude:
+  - nix-dev/
+  - README.md
+  - WORKLOG.md
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

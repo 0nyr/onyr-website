@@ -15,6 +15,15 @@
   font-display: swap;
   src: url("../font/Inter/InterVariable.woff2") format("woff2-variations");
 }
+/* Noto Sans SC, subset to the 3 characters of the Chinese name in the wordmark */
+@font-face {
+  font-family: "Noto Sans SC Name";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../font/NotoSansSC/NotoSansSC-name-subset.woff2") format("woff2-variations");
+  unicode-range: U+5B81, U+6B27, U+777F;
+}
 @font-face {
   font-family: "JetBrains Mono";
   font-style: normal;
@@ -225,7 +234,17 @@ body.is-home #general_footer { background: transparent; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 /* the ".net" suffix stays solid cyan while "Onyr" keeps the rainbow */
-.wm-net { font-size: 0.5em; -webkit-text-fill-color: var(--accent); color: var(--accent); }
+.wm-side { position: relative; display: inline-block; font-size: 0.5em; }
+.wm-net { -webkit-text-fill-color: var(--accent); color: var(--accent); }
+/* Chinese name 欧宁睿, in the same chromanaryl gradient as "Onyr", hanging under ".net" */
+.wm-zh {
+  position: absolute; left: 0.14em; top: 100%; margin-top: -0.2em;
+  font-family: "Noto Sans SC Name", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.5em; font-weight: 800; line-height: 1.2; letter-spacing: 0.14em; white-space: nowrap;
+  background: var(--wheel);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
 .hero-bar { height: 6px; width: 118px; border-radius: 4px; margin: 20px 0; background: var(--wheel); }
 .hero-tag { font-size: clamp(17px, 2.2vw, 21px); color: var(--ink); opacity: 0.92; max-width: 34ch; }
 .hero-tag p { margin: 0 0 0.4em; }
