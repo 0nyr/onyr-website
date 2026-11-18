@@ -205,7 +205,7 @@ That evening, Karen invited me to dinner at Din Tai Fung, the dumpling house pra
 
 Among the meals and outings, I have also been doing what I do wherever I am. I updated my NixOS laptop and my server, worked on this website, and experimented with running more AI tools locally on Linux, on top of the heavy work on the manuscript and the [Kayros solver](https://github.com/0nyr/kayros).
 
-One of those experiments used Parley and Whisper for speech-to-text on the laptop. Speaking aloud and obtaining a usable transcript without leaving the machine was encouraging. I also tested local language models for agent tasks through opencode. A smaller model worked, while a larger one first trapped itself in a loop on a NixOS question before tuning improved the result. These are still experiments, with the occasional frustration that the word implies. I like the prospect of having useful tools on my own machine when no connection is available.
+One of those experiments used [Parley](https://github.com/Hankanman/Parley) and [Whisper](https://github.com/openai/whisper) for speech-to-text on the laptop. Speaking aloud and obtaining a usable transcript without leaving the machine was encouraging. I also tested local language models for agent tasks through opencode. A smaller model worked, while a larger one first trapped itself in a loop on a NixOS question before tuning improved the result. These are still experiments, with the occasional frustration that the word implies. I like the prospect of having useful tools on my own machine when no connection is available.
 
 ## Starting to feel at home
 
