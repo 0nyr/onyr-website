@@ -14,8 +14,8 @@
         } catch (e) {}
       })();
     </script>
-    <!-- style (fonts self-hosted via @font-face in styles.css) -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <!-- Version the stylesheet so cached CSS matches the page markup. -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css?v={{ site.time | date: '%s' }}">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicons/favicon-32x32.png">

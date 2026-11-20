@@ -229,18 +229,18 @@ body.is-home #general_footer { background: transparent; }
 }
 .wordmark {
   font-size: clamp(64px, 12vw, 132px); font-weight: 800;
-  line-height: 1.04; margin: 0; padding-bottom: 0.08em; width: max-content; max-width: 100%;
+  line-height: 1.04; margin: 0; padding-bottom: 0.08em; width: max-content; max-width: 100%; white-space: nowrap;
   background: var(--wheel);            /* FIXED — motion comes from the logo */
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 /* the ".net" suffix stays solid cyan while "Onyr" keeps the rainbow */
-.wm-side { position: relative; display: inline-block; font-size: 0.5em; }
+.wm-side { display: inline-grid; justify-items: start; font-size: 0.5em; }
 .wm-net { -webkit-text-fill-color: var(--accent); color: var(--accent); }
 /* Chinese name 欧宁睿, in the same chromanaryl gradient as "Onyr", hanging under ".net" */
 .wm-zh {
-  position: absolute; left: 0.14em; top: 100%; margin-top: -0.2em;
+  margin-inline-start: 0.14em;
   font-family: "Noto Sans SC Name", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.5em; font-weight: 800; line-height: 1.2; letter-spacing: 0.14em; white-space: nowrap;
+  font-size: 0.5em; font-weight: 800; line-height: 1.2; letter-spacing: 0.14em;
   background: var(--wheel);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;

@@ -20,7 +20,8 @@ permalink: /cv/
 
 ## Experience
 
-+ **Teaching Assistant, INSA Lyon.** 2024–present. AAIA (Advanced Algorithms for Artificial Intelligence and Graphs), a course designed by Christine Solnon.
++ **Visiting Scholar, The Hong Kong Polytechnic University.** Nov 2026–present. Hong Kong SAR (on-site). Intelligent Transport Systems (ITS) research with [Prof. Edward C. Chung](https://www.edwardchung.com/) in the [Department of Electrical and Electronic Engineering](https://www.polyu.edu.hk/eee/), with the [Electric Vehicles and Smart Mobility](https://www.polyu.edu.hk/eee/research/research-themes-and-strength/electric-vehicles-and-smart-mobility/) and [Multimodal Smart Mobility](https://multimodal-smart-mobility.github.io/) groups.
++ **Teaching Assistant, INSA Lyon (Institut National des Sciences Appliquées de Lyon).** Feb 2024–Jun 2026 (2 yrs 5 mos). Part-time contract (on-site). AAIA (Advanced Algorithms for Artificial Intelligence and Graphs), a course designed by Christine Solnon.
 + **PhD Student, IMT Atlantique.** 2024–present. Joint supervision with INSA Lyon.
 + **President, INSAlgo.** 2024–2025. Student association on algorithms and programming.
 + **Treasurer, Kryptosphère (INSA Lyon branch).** 2021–2022. Founding member.
